@@ -1,0 +1,67 @@
+extends ../main
+
+block personalStyle
+	link(rel="stylesheet", type="text/css" href="css/index.css")
+
+block title 
+	| Ограждения и благоустройство
+
+block main-content
+	section.section.goods#goods
+		header.section__header
+			h2.section__header-name Категории товаров
+		ul.list.goods__list
+			- var goods = ['Категория 1', 'Категория 2', 'Категория 3']
+			each good in goods
+				li.list__item.goods__item
+					a(class="goods__link", href= good + '.html')
+						wrapper.goods__img-wrapper
+							img(src='img/' + good + '.jpg', class="goods__img", alt="Категория")
+						span.goods__text= good
+
+	section.section.service#service
+		header.section__header
+			h2.section__header-name Предоставляемые услуги
+		ul.list.service__list
+			- var service = ['Доставка товаров по Санкт-Петербургу и Ленинградской области', 'Установка антипарковочного оборудования', 'Проектирование, создание проектно-сметной документации', 'Производство изделий по Вашим чертежам и эскизам', 'Помощь в получении допуска СРО на все виды работ', 'Согласование разработанной документации в органах надзора и контроля']
+			- for (var i = 0; i < service.length; i++)
+				li.list__item.service__item
+					a(class="service__link", href="#", id='service-' + i)
+						span.service__text= service[i]
+						span.service__about Подробнее...
+
+	section.section.about#about
+		header.section__header
+			h2.section__header-name О нашей компании
+		ul.list.about__list
+			- var facts  = ['7', 'лет работы на рынке', '5165+', 'довольных клиентов', '12%', 'достигает разница между нашими и рыночными ценами', '1000+', 'товаров в ассортименте']
+			- for (var i = 0; i < facts.length; i + 2)
+				li.list__item.about__item
+					wrapper.about__number-wrapper
+						.about__number-border
+							span.about__number= facts[i]
+					span.about__text= facts[i + 1]
+
+	section.section.clients#clients
+		header.section__header
+			h2.section__header-name Наши клиенты
+		wrapper.clients__img-wrapper
+			img(src="img/clients.jpg" class="clients__img" alt="Клиенты")
+
+	- var service__descr = ['Доставка товаров по Санкт-Петербургу и Ленинградской области', 'Установка антипарковочного оборудования', 'Проектирование, создание проектно-сметной документации', 'Производство изделий по Вашим чертежам и эскизам', 'Помощь в получении допуска СРО на все виды работ', 'Согласование разработанной документации в органах надзора и контроля']
+	-for (var i = 0; i < service.length; i++)
+		div(class="popup", id='descr__popup-' + indx)
+			header.popup__header
+				h3.popup__name= service[i]
+				a(class="popup__close b-close", id="popup__close") Крестик
+			.popup__descr
+				span.popup__text= service__descr[i]
+
+
+
+
+
+	
+
+
+

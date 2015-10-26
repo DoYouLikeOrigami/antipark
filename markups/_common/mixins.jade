@@ -1,0 +1,7 @@
+mixin service__descr(indx, descr__name, descr__text)
+	div(class="popup", id='descr__popup-' + indx)
+		header.popup__header
+			| descr__name
+			a(class="popup__close b-close", id="close-popup") Крестик
+		.popup__descr
+			span.popup__text desrc__text
