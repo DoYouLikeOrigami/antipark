@@ -1,0 +1,10 @@
+﻿- var goods = {'Stolbiki': 'Столбики','Barieri': 'Барьеры','Conusi': 'Конусы', 'Polysferi': 'Полусферы', 'Vazoni': 'Вазоны Бетонные', 'Urni': 'Урны Бетонные','Skameiki': 'Уличные Скамейки', 'Znaki': 'Дорожные Знаки', 'Setki': 'СеткиПластиковые', 'Lenti': 'Лента Сигнальная', 'Shlagbaumi': 'Автоматические Шлагбаумы', 'Turniketi': 'Турникеты', 'Privodi': 'Приводы для Ворот', 'Policeiski': 'Лежачий Полицейский'}
+
+aside.aside
+	nav.aside__nav
+		ul.aside__list
+			each val, index in goods
+				li(class="aside__item", qtip-text= val)
+					a(class="aside__item-link aside__item-" + index, href= index + '.html')
+						img(src="img/small/" + index + '.jpg', alt= val).aside__item-img
+					
