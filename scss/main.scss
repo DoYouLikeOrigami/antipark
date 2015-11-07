@@ -1,4 +1,4 @@
-$mainColor: #000;
+$mainColor: #fff;
 $secondaryColor: #f97c00;
 $footerColor: rgb(76, 76, 76);
 
@@ -36,6 +36,12 @@ body {
 *:before,
 *:after {
 	box-sizing: border-box;
+}
+
+/* Mixins */
+@mixin inlineblock ($valine: top) {
+	display: inline-block;
+	vertical-align: $valine;
 }
 
 /* Общие классы */
@@ -426,7 +432,7 @@ body {
 			width: $asideLinkSize;
 			height: $asideLinkSize;
 			text-decoration: none;
-			border: 3px solid rgba(76, 76, 76, 0.4);
+			border: 2px solid rgba(76, 76, 76, 0.4);
 			border-radius: 3px;
 			text-align: center;
 			overflow: hidden;
@@ -443,7 +449,7 @@ body {
 			}
 
 			&__item-link:hover .aside__item-img {
-				height: 12ы0%;
+				height: 110%;
 				margin-left: -2px;
 			}
 
@@ -452,3 +458,37 @@ body {
 		}
 }
 
+/* bread */
+.bread__item {
+	@include inlineblock(middle);
+	font-size: 14px;
+
+	&:before {
+		content: ' > ';
+		color: $footerColor;
+		@include inlineblock(middle);
+	}
+
+	&:first-child:before {
+		display: none;
+	}
+
+	&.active {
+		.bread__link {
+			color: $secondaryColor;
+			text-decoration: underline;
+		}
+	}
+}
+
+.bread__list {
+	margin-bottom: 21px;
+}
+
+.bread__link {
+	color: $footerColor;
+	font-size: 14px;
+	line-height: 16px;
+	@include inlineblock(middle);
+	text-decoration: none;
+}

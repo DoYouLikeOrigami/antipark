@@ -15,6 +15,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/* Mixins */
 /* Общие классы */
 .clearfix:before,
 .clearfix:after {
@@ -312,7 +313,7 @@ body {
     width: 40px;
     height: 40px;
     text-decoration: none;
-    border: 3px solid rgba(76, 76, 76, 0.4);
+    border: 2px solid rgba(76, 76, 76, 0.4);
     -webkit-border-radius: 3px;
     border-radius: 3px;
     text-align: center;
@@ -329,3 +330,30 @@ body {
     margin-left: -2px; }
   .aside__item-text {
     display: none; }
+
+/* bread */
+.bread__item {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px; }
+  .bread__item:before {
+    content: ' > ';
+    color: #4c4c4c;
+    display: inline-block;
+    vertical-align: middle; }
+  .bread__item:first-child:before {
+    display: none; }
+  .bread__item.active .bread__link {
+    color: #f97c00;
+    text-decoration: underline; }
+
+.bread__list {
+  margin-bottom: 21px; }
+
+.bread__link {
+  color: #4c4c4c;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none; }
