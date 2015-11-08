@@ -263,3 +263,6 @@
       -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1); }
+    .wrapper_list_in_text ul a {
+      text-decoration: none;
+      color: black; }
