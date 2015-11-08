@@ -1,0 +1,214 @@
+/*
+@font-face {
+    font-family: 'als_rublregular';
+    src: url('../fonts/rouble-webfont.eot');
+    src: url('../fonts/rouble-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/rouble-webfont.woff2') format('woff2'),
+         url('../fonts/rouble-webfont.woff') format('woff'),
+         url('../fonts/rouble-webfont.ttf') format('truetype'),
+         url('../fonts/rouble-webfont.svg#als_rublregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.rub {
+	font-family: 'als_rublregular';
+	font-style: normal;
+
+	&:after {
+		content: 'a';
+		font-style: inherit;
+		font-size: inherit;
+		line-height: inherit;
+	}
+*/
+/* Mixins */
+/* bread */
+.bread__item {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px; }
+  .bread__item:before {
+    content: ' > ';
+    color: #4c4c4c;
+    display: inline-block;
+    vertical-align: middle; }
+  .bread__item:first-child:before {
+    display: none; }
+  .bread__item.active .bread__link {
+    color: #f97c00;
+    text-decoration: underline; }
+
+.bread__list {
+  margin-bottom: 21px; }
+
+.bread__link {
+  color: #4c4c4c;
+  font-size: 14px;
+  line-height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none; }
+
+/* products */
+.products__list {
+  border: 1px solid #dee1e4;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  background-clip: padding-box;
+  overflow: hidden;
+  background: #fff;
+  width: 675px;
+  margin: 0 auto; }
+
+.products__item {
+  border-top: 1px solid #dee1e4; }
+  .products__item:first-child {
+    border-top: 0 none; }
+
+.products__item-inner {
+  padding: 19px 22px;
+  position: relative; }
+  .products__item-inner:before,
+  .products__item-inner:after {
+    content: "";
+    display: table; }
+  .products__item-inner:after {
+    clear: both; }
+
+.products__left {
+  float: left; }
+
+.products__image {
+  width: 140px;
+  float: left; }
+
+.products__image-display {
+  width: 134px;
+  height: 134px;
+  border: 1px solid #dee1e4;
+  background: #fff;
+  position: relative;
+  display: block;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-clip: padding-box; }
+
+.products__image-pic {
+  display: block;
+  max-width: 95%;
+  max-height: 95%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute; }
+
+/* description */
+.products__desc {
+  float: left;
+  width: 310px;
+  margin-left: 21px; }
+
+.products__desc-title {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  color: #010101;
+  margin-bottom: 20px;
+  padding-top: 7px; }
+
+.products__desc-options {
+  margin-bottom: 14px; }
+
+.products__option-item {
+  color: #000;
+  background: transparent;
+  display: block;
+  padding: 2px 4px; }
+  .products__option-item:before,
+  .products__option-item:after {
+    content: "";
+    display: table; }
+  .products__option-item:after {
+    clear: both; }
+
+.products__options-key {
+  font-size: 14px;
+  line-height: 16px;
+  float: left;
+  display: inline-block;
+  max-width: 50%;
+  text-align: left; }
+
+.products__options-value {
+  font-size: 14px;
+  line-height: 16px;
+  float: right;
+  display: inline-block;
+  max-width: 55%;
+  text-align: right; }
+
+.products__option-item-odd {
+  background: #e6e6e6; }
+
+.products__right {
+  position: absolute;
+  top: 23px;
+  bottom: 23px;
+  right: 23px;
+  width: 145px;
+  text-align: right; }
+
+.products__info {
+  padding-left: 15px;
+  border-left: 1px solid #dee1e4;
+  height: 100%; }
+
+.products__price {
+  color: #000;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  margin-bottom: 10px;
+  line-height: 22px; }
+  .products__price:before,
+  .products__price:after {
+    content: "";
+    display: table; }
+  .products__price:after {
+    clear: both; }
+
+.products__price-num {
+  font-size: 20px;
+  line-height: inherit;
+  display: inline-block;
+  vertical-align: bottom;
+  float: right; }
+
+.products__price-label {
+  font-size: 14px;
+  line-height: inherit;
+  display: inline-block;
+  vertical-align: bottom;
+  float: left; }
+
+.products__buy-btn {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  padding: 9px 12px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-clip: padding-box;
+  background: #ff6600;
+  color: #fff;
+  margin-bottom: 9px; }
+
+.products__info-button {
+  position: absolute;
+  bottom: 0;
+  right: 0; }

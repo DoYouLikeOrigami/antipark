@@ -5,3 +5,31 @@ mixin service__descr(indx, descr__name, descr__text)
 			a(class="popup__close b-close", id="close-popup") Крестик
 		.popup__descr
 			span.popup__text desrc__text
+
+mixin products__item(name, dest, img, chars, values, price, stage)
+	li.products__item
+		.products__item-inner
+			.products__left
+				.products__image
+					a(href="#").products__image-display
+						img(src="img/" + dest + img + ".jpg", alt= name).products__image-pic
+				.products__desc
+					.products__desc-title= name
+					ul.products__desc-options 
+						- var index = 0;
+						- for (var i = 0; i < chars.length; i++)
+							li(class="products__option-item " + ((index++ % 2) ? '' : 'products__option-item-odd') )
+								.products__options-key= chars[i]
+								.products__options-value= values[i]
+			.products__right
+				.products__info
+					.products__price
+						span.products__price-label Цена
+						span.products__price-num= price
+							i.rub
+					.products__price
+						span.products__price-label Установка
+						span.products__price-num= stage
+							i.rub
+				.products__info-button
+					a(href="#").products__buy-btn Заказать
