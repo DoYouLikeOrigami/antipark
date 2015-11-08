@@ -33,6 +33,11 @@
 		});
 	};
 
+	// indexHover without image
+      var goodsItems = document.getElementsByClassName('goods_item');
+      goodsItems.onmouseover = function() {
+      	alert(this);
+      }
   	
 	return {
 		init: init
