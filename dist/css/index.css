@@ -42,11 +42,9 @@
     -webkit-box-shadow: 0 0 3px 5px #ccc;
     box-shadow: 0 0 3px 5px #ccc;
     margin-top: -8px;
-    margin-bottom: 8px;
-    -webkit-transition: all ease-in-out 0.2s;
-    transition: all ease-in-out 0.2s; }
-  .goods__item:nth-of-type(4n),
-  .goods__item:last-of-type {
+    -webkit-transition: all ease-in-out .2s;
+    transition: all ease-in-out .2s; }
+  .goods__item:nth-of-type(4n), .goods__item:last-of-type {
     margin-right: 0; }
   .goods__link {
     display: block;
@@ -95,8 +93,7 @@
     border-radius: 5px;
     margin-right: 20px;
     margin-bottom: 20px; }
-  .service__item:nth-of-type(3n),
-  .service__item:last-of-type {
+  .service__item:nth-of-type(3n), .service__item:last-of-type {
     margin-right: 0; }
   .service__item:hover {
     background: #fff;
