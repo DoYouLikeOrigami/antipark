@@ -48,13 +48,13 @@ mixin first_part_of_desc(descrip_title, img_src, descrip_for_img, paragraph_belo
 						td
 							p!=val
 		p.paragraph_below!=paragraph_below 
-//
-	mixin list_in_desc(title_list, list_values, list_href)
-		div.wrapper_list_in_text
-			p.title_list!=title_list
-			ul
-				each val, index in list_values
-					li
-						a(href=list_href[index])!=val
+
+mixin list_in_desc(title_list, list_values, list_href)
+	div.wrapper_list_in_text
+		p.title_list!=title_list
+		ul
+			each val, index in list_values
+				li
+					a(href=list_href[index])!=val
 
 

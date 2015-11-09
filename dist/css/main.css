@@ -53,7 +53,7 @@ p {
   position: relative;
   min-height: 100%;
   height: auto !important;
-  min-width: 1080px; }
+  min-width: 960px; }
   .mainWrapper:after {
     content: "";
     display: block;
@@ -63,8 +63,8 @@ p {
   display: block;
   position: relative;
   margin: 0 auto;
-  min-width: 1080px;
-  max-width: 1200px; }
+  min-width: 960px;
+  max-width: 1000px; }
 
 .smallWidth {
   min-width: 960px;
@@ -246,7 +246,7 @@ p {
   position: relative;
   padding: 15px 0px;
   background-color: #f97c00;
-  min-width: 1080px; }
+  min-width: 960px; }
 
 /* Main Footer */
 .mainFooter {
@@ -257,7 +257,7 @@ p {
   margin-top: -100px;
   height: 100px;
   background: #4c4c4c;
-  min-width: 1080px; }
+  min-width: 960px; }
   .mainFooter .contacts__list-link {
     font-size: 18px;
     font-weight: normal; }
