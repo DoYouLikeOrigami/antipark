@@ -39,8 +39,8 @@
 	        nameSrc = 'img/goods/' + child_link.getAttribute('href').replace('html','jpg'),
 	        nameImg = '.goods__item img[src="'+nameSrc+'"]';
 		$(this).css('transform','scale(1.07)');
-		$(nameImg).css('transform', 'scale(.9251)');
-		//$(nameSpan).css('transform', '.9251');        
+		$(nameImg).css('transform', 'scale(.934579439)');
+		//$(nameSpan).css('transform', 'scale(.934579439)');        
 	}
 
 	var _scaleIn = function (e) {
