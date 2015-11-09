@@ -34,23 +34,17 @@ mixin products__item(name, dest, img, chars, values, price, stage)
 				.products__info-button
 					a(href="#").products__buy-btn Заказать
 
-mixin first_part_of_desc(descrip_title, img_src, descrip_for_img, paragraph_below)
-		h2.full_desc_for_product!=descrip_title
-		table
-			tbody
-				tr.img_row
-					each val in img_src
-						td
-							img(src=val)
-
-				tr.desc_for_img_row
-					each val in descrip_for_img	
-						td
-							p!=val
-		p.paragraph_below!=paragraph_below 
+mixin full-desc__first-part(title, img_src, desc_for_img, paragraph_below)
+	h2.full-desc__first-part__title!=title
+	each val, index in img_src
+		.full-desc__first-part__foto-and-desc
+			.full-desc__first-part__foto
+				img(src!=val, width=200)
+			h3.full-desc__first-part__desc!=desc_for_img[index]
+	p.full-desc__first-part__p-below!=paragraph_below 
 
 mixin list_in_desc(title_list, list_values, list_href)
-	div.wrapper_list_in_text
+	.wrapper_list_in_text
 		h3.title_list!=title_list
 		ul
 			each val, index in list_values
