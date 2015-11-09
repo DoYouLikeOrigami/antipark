@@ -7,8 +7,6 @@
 	var _setUpListeners = function () {
 		$('.userConnection__button').on('click', _showPopup);
 		$('.city__select').on('change', _changeCity);
-		// indexHover without image
-		$('.goods__item').hover(_scaleOut, _scaleIn);
 	};
 
 	var _showPopup = function (e) {
@@ -30,23 +28,6 @@
 
 		$('.city-mail').addClass('hidden');
 		$(city__class).removeClass('hidden');
-	}
-
-	var _scaleOut = function (e) {
-		e.preventDefault;
-		var child_link = this.firstChild,
-			//nameSpan = '.goods__link[href="'+child_link.getAttribute('href')+'"] span';
-	        nameSrc = 'img/goods/' + child_link.getAttribute('href').replace('html','jpg'),
-	        nameImg = '.goods__item img[src="'+nameSrc+'"]';
-		$(this).css('transform','scale(1.07)');
-		$(nameImg).css('transform', 'scale(.934579439)');
-		//$(nameSpan).css('transform', 'scale(.934579439)');        
-	}
-
-	var _scaleIn = function (e) {
-		e.preventDefault;
-		$('.goods__item img, .goods__item span').css('transform', 'scale(1)');
-		$(this).css('transform','scale(1)');
 	}
 
 	var _createQtip = function (el) {
