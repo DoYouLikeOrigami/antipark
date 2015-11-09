@@ -299,6 +299,7 @@ $grey: #dee1e4;
 .textAndImg {
 	color: black;
 	margin: 0 auto;
+	margin-bottom: 30px;
 	width: 675px;
 	border-radius: 7px;
 	border: 1px solid rgba(0,0,0,.1);
@@ -331,10 +332,11 @@ $grey: #dee1e4;
 	}
   }
 
-  .wrapper_list_in_text {
+ .wrapper_list_in_text {
   		margin: 30px;
   	.title_list {
   		text-align: center;
+  		font: 14px regular;
   	}
   	ul {
   		width: 400px;
@@ -343,7 +345,7 @@ $grey: #dee1e4;
   		list-style: circle outside;
 
   		li:nth-of-type(odd) {
-  			background: rgba(0,0,0,.3);
+  			background: rgba(0,0,0,.2);
   		}
   		li {
   			cursor: pointer;
@@ -355,6 +357,7 @@ $grey: #dee1e4;
   		a {
   			text-decoration: none;
   			color: black;
+  			outline: none;
   		}
   	 }
   }

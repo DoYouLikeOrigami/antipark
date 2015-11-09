@@ -32,8 +32,7 @@
 			opacity: 0.75,
 		});
 	};
-
-  	
+	
 	return {
 		init: init
 	};

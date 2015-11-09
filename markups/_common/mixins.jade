@@ -35,7 +35,7 @@ mixin products__item(name, dest, img, chars, values, price, stage)
 					a(href="#").products__buy-btn Заказать
 
 mixin first_part_of_desc(descrip_title, img_src, descrip_for_img, paragraph_below)
-		p.full_desc_for_product!=descrip_title
+		h2.full_desc_for_product!=descrip_title
 		table
 			tbody
 				tr.img_row
@@ -51,7 +51,7 @@ mixin first_part_of_desc(descrip_title, img_src, descrip_for_img, paragraph_belo
 
 mixin list_in_desc(title_list, list_values, list_href)
 	div.wrapper_list_in_text
-		p.title_list!=title_list
+		h3.title_list!=title_list
 		ul
 			each val, index in list_values
 				li

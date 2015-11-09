@@ -223,6 +223,7 @@
 .textAndImg {
   color: black;
   margin: 0 auto;
+  margin-bottom: 30px;
   width: 675px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
@@ -250,14 +251,15 @@
 .wrapper_list_in_text {
   margin: 30px; }
   .wrapper_list_in_text .title_list {
-    text-align: center; }
+    text-align: center;
+    font: 14px regular; }
   .wrapper_list_in_text ul {
     width: 400px;
     margin: 20px auto;
     line-height: 20px;
     list-style: circle outside; }
     .wrapper_list_in_text ul li:nth-of-type(odd) {
-      background: rgba(0, 0, 0, 0.3); }
+      background: rgba(0, 0, 0, 0.2); }
     .wrapper_list_in_text ul li {
       cursor: pointer;
       -webkit-transition: all ease-in-out 0.2s;
@@ -268,4 +270,5 @@
       transform: scale(1.1); }
     .wrapper_list_in_text ul a {
       text-decoration: none;
-      color: black; }
+      color: black;
+      outline: none; }
