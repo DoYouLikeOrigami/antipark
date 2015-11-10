@@ -24,9 +24,9 @@
 
 		var $this = $(this),
 			city = $this.val(),
-			city__class = '.' + city + '-mail';
+			city__class = '.' + city + '-city';
 
-		$('.city-mail').addClass('hidden');
+		$('.city-change').addClass('hidden');
 		$(city__class).removeClass('hidden');
 	}
 
