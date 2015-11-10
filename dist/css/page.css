@@ -69,8 +69,7 @@
 .products__item-inner {
   padding: 19px 22px;
   position: relative; }
-  .products__item-inner:before,
-  .products__item-inner:after {
+  .products__item-inner:before, .products__item-inner:after {
     content: "";
     display: table; }
   .products__item-inner:after {
@@ -128,8 +127,7 @@
   background: transparent;
   display: block;
   padding: 2px 4px; }
-  .products__option-item:before,
-  .products__option-item:after {
+  .products__option-item:before, .products__option-item:after {
     content: "";
     display: table; }
   .products__option-item:after {
@@ -173,8 +171,7 @@
   font-weight: 600;
   margin-bottom: 10px;
   line-height: 22px; }
-  .products__price:before,
-  .products__price:after {
+  .products__price:before, .products__price:after {
     content: "";
     display: table; }
   .products__price:after {
@@ -230,19 +227,15 @@
 
 .full-desc__first-part__foto-and-desc {
   display: inline-block;
-<<<<<<< HEAD
   margin-left: 15px;
   vertical-align: top;
   text-align: middle; }
 
 .full-desc__first-part__foto-and-desc:first-of-type {
-  margin-left: 18px; }
-=======
   margin-left: 10px; }
 
 .full-desc__first-part__foto-and-desc:nth-of-type(1) {
   margin-left: 15px; }
->>>>>>> 8757aaa2b0c7cc3d5c59abf7e9e44c41ad3907d1
 
 .full-desc__first-part__foto img {
   -webkit-border-radius: 50%;
@@ -263,7 +256,6 @@
 
 .fullDesc__list-wrapper {
   margin: 30px; }
-<<<<<<< HEAD
 
 .fullDesc__list-title {
   color: black;
@@ -297,28 +289,3 @@
   text-decoration: none;
   color: black;
   outline: none; }
-=======
-  .wrapper_list_in_text .title_list {
-    color: black;
-    text-align: center;
-    font: 14px regular; }
-  .wrapper_list_in_text ul {
-    width: 400px;
-    margin: 20px auto;
-    line-height: 20px;
-    list-style: circle outside; }
-    .wrapper_list_in_text ul li:nth-of-type(odd) {
-      background: rgba(0, 0, 0, 0.2); }
-    .wrapper_list_in_text ul li {
-      cursor: pointer;
-      -webkit-transition: all ease-in-out 0.2s;
-      transition: all ease-in-out 0.2s; }
-    .wrapper_list_in_text ul li:hover {
-      -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-      transform: scale(1.1); }
-    .wrapper_list_in_text ul a {
-      text-decoration: none;
-      color: black;
-      outline: none; }
->>>>>>> 8757aaa2b0c7cc3d5c59abf7e9e44c41ad3907d1
