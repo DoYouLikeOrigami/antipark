@@ -43,12 +43,12 @@ mixin full-desc__first-part(title, img_src, desc_for_img, paragraph_below)
 			h3.full-desc__first-part__desc!=desc_for_img[index]
 	p.full-desc__first-part__p-below!=paragraph_below 
 
-mixin list_in_desc(title_list, list_values, list_href)
-	.wrapper_list_in_text
-		h3.title_list!=title_list
-		ul
+mixin fullDesc__list(title_list, list_values, list_href)
+	.fullDesc__list-wrapper
+		h3.fullDesc__list-title!=title_list
+		ul.fullDesc__list-listUl
 			each val, index in list_values
-				li
-					a(href=list_href[index])!=val
+				li.fullDesc__list-listLi
+					a(href=list_href[index], class='fullDesc__list-listA')!=val
 
 
