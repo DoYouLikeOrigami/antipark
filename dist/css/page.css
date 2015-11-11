@@ -22,6 +22,9 @@
 		line-height: inherit;
 	}
 */
+body {
+  background: url("../img/bg/bg4.png"); }
+
 /* Mixins */
 /* bread */
 .bread__item {
@@ -219,7 +222,8 @@
   margin-bottom: 30px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
-  border: 1px solid rgba(0, 0, 0, 0.1); }
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff; }
 
 .full-desc__first-part__title {
   color: black;

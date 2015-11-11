@@ -30,6 +30,7 @@ body {
 	height: 100%;
 	font-size: $fontSize1;
 	color: $mainColor;
+	background: url('../img/bg/bg6.png');
 }
 
 table {
@@ -145,44 +146,6 @@ p {
 }
 
 /* Header && Footer */
-
-.logo {
-	display: inline-block;
-	position: relative;
-	float: $logoFloat;
-	padding-left: 20px;
-
-	&__img {
-		display: inline-block;
-		vertical-align: top;
-		width: $logoWidth;
-		height: $logoHeight;
-		overflow: hidden;
-	}
-
-		&__img-pic {
-			width: 100%;
-		}
-
-	&__text {
-		display: inline-block;
-		vertical-align: top;
-		max-width: 500px;
-		margin-left: 20px;
-		padding-top: 5px;
-	}
-
-		&__text-name {
-			display: block;
-			margin: 0;
-			margin-bottom: 10px;
-			letter-spacing: 1px;
-		}
-
-		&__text-descr {
-			display: block;
-		}
-}
 
 	.contacts {
 		display: inline-block;
@@ -317,9 +280,148 @@ p {
 .mainHeader {
 	display: block;
 	position: relative;
-	padding: 10px 0px;
-	background-color: $secondaryColor;
 	min-width: $minContainerWidth;
+
+	.mainHeader__top {
+		display: block;
+		background: $footerColor;
+		padding: 5px 0;
+	}
+
+	.mainHeader__left {
+		display: block;
+		width: 50%;
+		float: left;
+	}
+
+	.mainHeader__right {
+		display: block;
+		width: 50%;
+		float: left;
+	}
+
+	.mainHeader__mail-list {
+		display: inline-block;
+		padding-left: 10px;
+	}
+
+	.mainHeader__mail-item {
+		display: block;
+	}
+
+	.mainHeader__mail-link {
+		display: block;
+		text-decoration: none;
+		color: $mainColor;
+		font-size: $fontSize1_5;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.city {
+		display: inline-block;
+		float: right;
+		font-weight: bold;
+		color: $mainColor;
+
+		&__label {
+			display: inline-block;
+		}
+
+		&__select {
+			display: inline-block;
+			margin-left: 10px;
+			padding: 1px 3px;
+			color: $secondaryColor;
+			border-radius: 3px;
+			outline: none;
+		}
+
+		&__option {
+			color: $secondaryColor;
+		}
+	}
+
+	.mainHeader__bottom {
+		display: block;
+		padding: 15px 5px;
+	}
+
+	.logo {
+		display: inline-block;
+		float: left;
+		padding: 8px 30px;
+		background: $secondaryColor;
+		border-radius: 5px;
+
+		.logo__img {
+			display: none;
+			vertical-align: top;
+			width: $logoWidth;
+			height: $logoHeight;
+			overflow: hidden;
+		}
+
+			.logo__img-pic {
+				width: 100%;
+			}
+
+		.logo__text {
+			display: inline-block;
+			max-width: 500px;
+			text-align: center;
+		}
+
+			.logo__text-name {
+				margin: 0;
+				//margin-bottom: 10px;
+				letter-spacing: 2px;
+				text-transform: uppercase;
+				font-size: 36px;
+			}
+
+			.logo__text-descr {
+				font-size: 15px;
+				letter-spacing: 1px;
+			}
+	}
+
+	.contacts {
+		display: inline-block;
+		float: right;
+	}
+
+		.contacts__list {
+			display: block;
+			padding: 0;
+			margin: 0;
+			margin-bottom: 5px;
+
+			&-item {
+				display: block;
+				list-style: none;
+				text-align: center;
+			}
+
+			&-link {
+				display: inline-block;
+				text-decoration: none;
+				color: $mainColor;
+				font-size: $fontSize1;
+				font-weight: bold;
+			}
+
+			&-link:hover {
+				text-decoration: underline;
+			}
+		}
+
+		.contacts__tel {
+			font-size: 22px;
+		}
+
 }
 
 			
@@ -332,7 +434,8 @@ p {
 	color: $mainColor;
 	margin-top: -$footerHeight;
 	height: $footerHeight;
-	background: $footerColor;
+	//background: $footerColor;
+	background: url('../img/bg/bg5.png');
 	min-width: $minContainerWidth;
 
 	.contacts__list {
@@ -412,38 +515,7 @@ p {
 		}
 }
 
-.city {
-	display: block;
-	position: absolute;
-	right: 0;
-	top: 0;
-	height: 100%;
-	line-height: 45px;
-	margin: 0;
-	max-width: 300px;
-	font-weight: bold;
-	color: $secondaryColor;
 
-	&__label {
-		display: inline-block;
-		vertical-align: middle;
-	}
-
-	&__select {
-		display: inline-block;
-		vertical-align: middle;
-		margin-left: 10px;
-		padding: 1px 3px;
-		color: $secondaryColor;
-		border: 2px solid  #e6e6e6;
-		border-radius: 3px;
-		outline: none;
-	}
-
-	&__option {
-		color: $secondaryColor;
-	}
-}
 
 .aside {
 	display: block;

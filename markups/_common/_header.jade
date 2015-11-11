@@ -1,23 +1,34 @@
 header#mainHeader.mainHeader
-	wrapper.container.clearfix
-		wrapper.logo
-			.logo__img
-				img(src="img/logo.jpg", class="logo__img-pic", alt="Лого")
-			.logo__text
-				h1.logo__text-name Ограждения и благоустройство
-				span.logo__text-descr Парковочные барьеры, дорожные столбики, сигнальные конусы
-		wrapper.contacts
-			ul.contacts__list
-				li.contacts__list-item
-					a(class="contacts__list-link contacts__tel", href="tel:+7(812)900-40-10") +7(812)900-40-10
-				li.contacts__list-item.city-change.spb-city
-					a(class="contacts__list-link", href="mailto:spb@9004010.ru") spb@9004010.ru
-				li.contacts__list-item.city-change.msc-city.hidden
-					a(class="contacts__list-link", href="mailto:msk@9004010.ru") msk@9004010.ru
-				li.contacts__list-item.city-change.novosib-city.hidden
-					a(class="contacts__list-link", href="mailto:novosib@9004010.ru") novosib@9004010.ru
-			.userConnection
-				button.userConnection__button Заказать звонок
+	wrapper.mainHeader__top
+		wrapper.container.clearfix
+			.mainHeader__left
+				ul.mainHeader__mail-list
+					li.mainHeader__mail-item.city-change.spb-city
+						a(href="mailto:spb@9004010.ru").mainHeader__mail-link spb@9004010.ru
+					li.mainHeader__mail-item.city-change.msc-city.hidden
+						a(href="mailto:msk@9004010.ru").mainHeader__mail-link msk@9004010.ru
+					li.mainHeader__mail-item.city-change.novosib-city.hidden
+						a(href="mailto:novosib@9004010.ru").mainHeader__mail-link novosib@9004010.ru
+			.mainHeader__right
+				.city
+					label.city__label Ваш город
+					select(name="select-city", class="city__select")
+						option(value="spb", class="city__option" selected) Санкт-Петербург
+						option(value="msc", class="city__option") Москва
+						option(value="novosib", class="city__option") Новосибирск
+
+	wrapper.mainHeader__bottom
+		wrapper.container.clearfix
+			wrapper.logo
+				.logo__img
+					img(src="img/logo.jpg", class="logo__img-pic", alt="Лого")
+				.logo__text
+					span.logo__text-descr Ограждения и благоустройство
+					h1.logo__text-name Столбик.рф
+			wrapper.contacts
+				a(href="tel:+7(812)900-40-10").contacts__tel +7(812)
+					span.contacts__strong 900-40-10	
+				a(href="#").userConnection__button Заказать звонок
 				
 					
 		
