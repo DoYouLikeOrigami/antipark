@@ -302,7 +302,6 @@ body {
 		border: 1px solid rgba(0,0,0,.1);
 		background: $mainColor;
 	}
-
 	&__title {
 		color: black;
 		text-align: center;
@@ -312,13 +311,18 @@ body {
 	}
 	&__foto-and-desc {
 		display: inline-block;
+		margin-left: 15px;
+		vertical-align: top;
+		text-align: middle;
+	}
+	&__foto-and-desc:first-of-type {
 		margin-left: 10px;
 	}
 	&__foto-and-desc:nth-of-type(1) {
 		margin-left: 15px;
 	}
 	&__foto img{
-	border-radius: 50%;
+		border-radius: 50%;
 	} 
 	&__desc {
 		color: black;
@@ -326,6 +330,7 @@ body {
 		font-size: 16px;
 		font-weight: bold;
 		text-align: center;
+		max-width: 200px;
 	}
 	&__p-below {
 		color: black;
@@ -334,34 +339,47 @@ body {
 	}
 }
 
- .wrapper_list_in_text {
-  		margin: 30px;
-  	.title_list {
+ .fullDesc__list {
+
+ 	    &-wrapper {
+ 	  	margin: 30px;
+ 	    }
+
+  	    &-title {
   		color: black;
   		text-align: center;
   		font: 14px regular;
-  	}
-  	ul {
+  	    }
+
+  	    &-listUl {
   		width: 400px;
   		margin: 20px auto;
   		line-height: 20px;
+  		color: black;
   		list-style: circle outside;
+		}
 
-  		li:nth-of-type(odd) {
+  		&-listLi:nth-of-type(odd) {
   			background: rgba(0,0,0,.2);
   		}
-  		li {
+
+  		&-listLi {
   			cursor: pointer;
+  			border-radius: 3px;
   			transition: all ease-in-out .2s;
   		}
-  		li:hover {
+
+  		&-listLi:hover {
   			transform: scale(1.1);
   		}
-  		a {
+
+  		&-listA {
+  			padding-left: 10px;
   			text-decoration: none;
   			color: black;
   			outline: none;
   		}
+
   	 }
-  }
+  
 

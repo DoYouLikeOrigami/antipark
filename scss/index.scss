@@ -75,10 +75,6 @@ $popupPadding: 42px;
 			transform: scale(.934579439);
 		}
 
-		&__item:hover .goods__img {
-			transform: scale(1.0);
-		}
-
 		&__item:nth-of-type(4n),
 		&__item:last-of-type {
 			margin-right: 0;

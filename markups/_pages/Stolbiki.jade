@@ -42,7 +42,7 @@ block main-content
 	- var this_img_src = ['http://www.strod-servis.ru/images/000.jpg','http://www.mosarz10.ru/_pictures/dsc01310.jpg','http://golovinskiy.mos.ru/upload/medialibrary/816/vydvizhnye-stolbiki.jpg'] 
 	- var this_desc_for_img = ['Ограждение территории','Создание парковочных мест', 'Ограничение пешеходной зоны']
 	- var this_paragraph_below = 'Существуют различные варианты исполнения дорожных парковочных столбиков: стальные, оцинкованные и из нержавеющей стали, а также полимерные (пластиковые) столбики. В зависимости от материала изготовления столбика определяется его степень подверженности коррозии и срок службы при конкретных условиях эксплуатации. Стальные и оцинкованные антипарковочные столбики сверху покрываются специальной порошковой краской, которая защищает металл столбика от коррозии. Наши клиенты имеют возможность выбрать цвет столбика из каталога RAL. По умолчанию, парковочные столбики красятся в серый цвет. Также за дополнительную плату возможно дополнительное покрытие столбика лаком. Нержавеющий столбик также может быть покрашен в любой цвет RAL по желанию Заказчика.'
-	
+
 	.full-desc__first-part__wrapper
 		+full-desc__first-part(this_desc_title, this_img_src, this_desc_for_img, this_paragraph_below)
 
@@ -51,7 +51,7 @@ block main-content
 
 		-var this_list_href = ['#','#','#','#','#']
 
-		+list_in_desc(this_title_list, this_list_values, this_list_href)
+		+fullDesc__list(this_title_list, this_list_values, this_list_href)
 
 
 
