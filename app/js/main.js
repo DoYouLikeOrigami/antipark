@@ -5,7 +5,7 @@
 	};
 
 	var _setUpListeners = function () {
-		$('.userConnection__button').on('click', _showPopup);
+		$('.contacts__button').on('click', _showPopup);
 		$('.city__select').on('change', _changeCity);
 	};
 
