@@ -584,3 +584,51 @@ p {
 		}
 }
 
+	.buttonUp {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 15%;
+		cursor: pointer;
+		transition: all .2s ease-in-out 0s;
+		z-index: 3;
+		display: none;
+
+		&-body	{
+		position: fixed;
+		top: 85%;
+		left: 5%;
+		background: rgba(0,0,0,.6);
+		height: 60px;
+		width: 60px;
+		border-radius: 50%;
+		cursor: pointer;
+		transition: all .2s ease-in-out 0s;
+		z-index: 2;
+		}
+		&-triangleUp {
+			position: relative;
+			margin: auto;
+			height: 0;
+			width: 0;
+			border: 15px solid transparent;
+			border-bottom: 25px solid rgba(0,0,50,.4);
+			transition: all .2s ease-in-out 0s;
+			z-index: 1;
+		}
+		&-transform {
+			transform: matrix(1, 0, 0, -1, 0, 0)
+		}
+		&:hover {
+			background: rgba(0,0,0,.3);
+		}
+		.buttonUp:hover &-body {
+			background: rgba(0,0,0,.5);
+			border: 1px solid white;
+		}
+		.buttonUp:hover &-triangle {
+			border-bottom: 25px solid rgba(0,0,50,.3);
+		}
+	}
+

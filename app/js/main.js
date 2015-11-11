@@ -7,6 +7,8 @@
 	var _setUpListeners = function () {
 		$('.userConnection__button').on('click', _showPopup);
 		$('.city__select').on('change', _changeCity);
+		$('.buttonUp').on('click',_buttonUp);
+		$(window).on('scroll',_triangleWhere);
 	};
 
 	var _showPopup = function (e) {
@@ -56,6 +58,33 @@
 
 	};
 
+
+	var _buttonUp = function () {
+		var scroll = $(window).scrollTop();
+		if (scroll>0) {
+			$('html, body').animate({scrollTop: $('html, body').offset().top}, 600);
+			$('.buttonUp-body').addClass('buttonUp-transform');
+			$('.buttonUp').attr('href', $(window).scrollTop());
+		}
+	    else {
+			$('html, body').animate({scrollTop: $('.buttonUp').attr('href')}, 600);
+			$('.buttonUp-body').removeClass('buttonUp-transform');
+	}
+	return false;
+}
+	var _triangleWhere = function (e) {
+		e.preventDefault;
+		if ($(window).scrollTop()>0) {
+			$('.buttonUp-body').removeClass('buttonUp-transform');
+			$('.buttonUp').css('display','block');
+		}
+		else if (!$('.buttonUp').attr('href')) {
+			$('.buttonUp').css('display','none');
+		}
+		else {
+			$('.buttonUp-body').addClass('buttonUp-transform');
+		}
+	}
   	
 	return {
 		init: init
