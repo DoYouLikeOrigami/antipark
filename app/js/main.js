@@ -62,8 +62,7 @@
 	var _buttonUp = function () {
 		var scroll = $(window).scrollTop();
 		if (scroll>0) {
-			$('.buttonUp-body').addClass('buttonUp-transform');
-			$('html, body').animate({scrollTop: 0}, 600);
+			$('html, body').animate({scrollTop: 0	}, 600);
 			$('.buttonUp').attr('href', scroll);
 		}
 	    else {
