@@ -62,13 +62,12 @@
 	var _buttonUp = function () {
 		var scroll = $(window).scrollTop();
 		if (scroll>0) {
-			$('html, body').animate({scrollTop: $('html, body').offset().top}, 600);
 			$('.buttonUp-body').addClass('buttonUp-transform');
-			$('.buttonUp').attr('href', $(window).scrollTop());
+			$('html, body').animate({scrollTop: 0}, 600);
+			$('.buttonUp').attr('href', scroll);
 		}
 	    else {
 			$('html, body').animate({scrollTop: $('.buttonUp').attr('href')}, 600);
-			$('.buttonUp-body').removeClass('buttonUp-transform');
 	}
 	return false;
 }
