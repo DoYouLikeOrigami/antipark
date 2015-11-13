@@ -6,7 +6,7 @@
 	};
 
 	var _setUpListeners = function () {
-		$('.service__link').on('click', _showPopup);
+		$('.service__link-popup').on('click', _showPopup);
 	};
 
 	var _slick = function () {

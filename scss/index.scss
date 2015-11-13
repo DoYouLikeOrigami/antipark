@@ -169,12 +169,12 @@ $popupPadding: 42px;
 		max-width: 200px;
 		margin-bottom: 10px;
 		font-weight: bold;
-		font-size: $fontSize1;
+		font-size: 16px;
 	}
 
 	&__about {
 		display: block;
-		font-size: $fontSize0;
+		font-size: 14px;
 	}
 }
 
@@ -219,7 +219,7 @@ $popupPadding: 42px;
 
 	&__text {
 		display: block;
-		font-size: $fontSize1_5;
+		font-size: 18px;
 		font-weight: bold;
 		max-width: 200px;
 	}

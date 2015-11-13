@@ -149,45 +149,11 @@ p {
 	&:last-of-type {
 		padding-bottom: 10px;
 		margin-bottom: 20px;
+		border-radius: 0 0 10px 10px;
 	}
 }
 
-/* Header && Footer */
-
-	.contacts {
-		display: inline-block;
-		position: relative;
-		float: $contactFloat;
-	}
-
-		.contacts__list {
-			display: block;
-			padding: 0;
-			margin: 0;
-			margin-bottom: 5px;
-
-			&-item {
-				display: block;
-				list-style: none;
-				text-align: center;
-			}
-
-			&-link {
-				display: inline-block;
-				text-decoration: none;
-				color: $mainColor;
-				font-size: $fontSize1;
-				font-weight: bold;
-			}
-
-			&-link:hover {
-				text-decoration: underline;
-			}
-		}
-
-		.contacts__tel {
-			font-size: 22px;
-		}
+	
 
 		.userConnection {
 			display: block;
@@ -450,7 +416,6 @@ p {
 .mainFooter {
 	display: block;
 	position: relative;
-	padding-top: 15px;
 	color: $mainColor;
 	margin-top: -$footerHeight;
 	height: $footerHeight;
@@ -458,33 +423,71 @@ p {
 	background: url('../img/bg/bg5.png');
 	min-width: $minContainerWidth;
 
-	.contacts__list {
-		padding-top: 15px;
-		margin-bottom: 0;
+	.mainFooter__top {
+		.container {
+			padding: 10px 0px;
+		}
 	}
 
 	.adress {
-		display: inline-block;
+		display: block;
+		width: 50%;
 		float: left;
-		position: relative;
+	}
+
+	.adress__list,
+	.contacts__list {
+		display: block;
+		padding: 0;
+		padding-top: 5px;
+		margin-bottom: 0;
 	}
 
 	.adress__list {
-		@extend .contacts__list;
+		display: inline-block;
+		padding-top: 15px;
 	}
 
-	.adress__list-item {
-		@extend .contacts__list-item;
+	.adress__list-item,
+	.contacts__list-item {
+		display: block;
+		list-style: none;
+		text-align: center;
 		font-size: $fontSize2;
 	}
+
+	.contacts {
+		display: block;
+		float: right;
+	}
+
 
 	.contacts__list-link {
 		font-size: $fontSize2;
 		font-weight: normal;
+		text-decoration: none;
+		color: $mainColor;
+		font-size: $fontSize1;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	.contacts__tel {
 		font-size: 20px;
+	}
+			
+	.mainFooter__bottom {
+		line-height: 20px;
+		text-align: center;
+		border-top: 1px solid $mainColor;
+	}
+
+	.copyright {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 12px;
 	}
 }
 
@@ -653,11 +656,12 @@ p {
 		}
 
 		&-transform {
-			transform: matrix(1, 0, 0, -1, 0, 0)
+			//transform: matrix(1, 0, 0, -1, 0, 0);
+			transform: matrix(-1, 0, 0, -1, 0, 0);
 		}
 
 		&:hover {
-			background: rgba(0,0,0,.15);
+			background: rgba(249,144,0,.15);
 		}
 
 		.buttonUp:hover &-body {

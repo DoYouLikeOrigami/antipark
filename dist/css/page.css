@@ -23,24 +23,42 @@
 	}
 */
 /* Mixins */
+.section:first-of-type {
+  padding-top: 20px; }
+
+.section:last-of-type {
+  padding-bottom: 20px; }
+
+.goodsSection {
+  background: #f97c00; }
+
 /* bread */
+.bread {
+  display: block;
+  background: #fff;
+  -webkit-box-shadow: 0px 4px 2px 3px #ccc;
+  box-shadow: 0px 4px 2px 3px #ccc;
+  padding: 10px 15px;
+  border-bottom: 1px solid #dee1e4; }
+
+.bread__list {
+  margin: 0;
+  padding: 0; }
+
 .bread__item {
   display: inline-block;
-  vertical-align: middle;
-  font-size: 14px; }
+  vertical-align: middle; }
   .bread__item:before {
     content: ' > ';
     color: #4c4c4c;
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle;
+    margin-right: 2px; }
   .bread__item:first-child:before {
     display: none; }
   .bread__item.active .bread__link {
     color: #f97c00;
     text-decoration: underline; }
-
-.bread__list {
-  margin-bottom: 21px; }
 
 .bread__link {
   color: #4c4c4c;
@@ -48,7 +66,8 @@
   line-height: 16px;
   display: inline-block;
   vertical-align: middle;
-  text-decoration: none; }
+  text-decoration: none;
+  margin-right: 2px; }
 
 /* products */
 .products__list {
@@ -65,6 +84,12 @@
   border-top: 1px solid #dee1e4; }
   .products__item:first-child {
     border-top: 0 none; }
+  .products__item:nth-of-type(2n) {
+    background: #e6e6e6; }
+    .products__item:nth-of-type(2n) .products__option-item-odd {
+      background: #fff; }
+    .products__item:nth-of-type(2n) .products__info {
+      border-color: #fff; }
 
 .products__item-inner {
   padding: 19px 22px;
@@ -220,7 +245,8 @@
   -webkit-border-radius: 7px;
   border-radius: 7px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background: #fff; }
+  background: #fff;
+  padding-top: 20px; }
 
 .full-desc__first-part__title {
   color: black;

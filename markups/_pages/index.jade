@@ -27,17 +27,23 @@ block main-content
 		ul.list.service__list
 			- var service = ['Доставка товаров по Санкт-Петербургу и Ленинградской области', 'Установка антипарковочного обордования', 'Проектирование, создание проектно-сметной документации', 'Производство изделий по вашим чертежам и эскизам', 'Помощь в получении допуска СРО на все виды работ', 'Согласование разработанной документации в органах надзора и контроля']
 			- for (var i = 0; i < service.length; i++)
-				li.list__item.service__item
-					a(class="service__link", href="#", id='service-' + i)
-						span.service__text= service[i]
-						span.service__about Подробнее...
+				if (i != 4)
+					li.list__item.service__item
+						a(class="service__link service__link-popup", href="#", id='service-' + i)
+							span.service__text= service[i]
+							span.service__about Подробнее...
+				else 
+					li.list__item.service__item
+						a(class="service__link", href="SRO.html")
+							span.service__text= service[i]
+							span.service__about Подробнее...
 	
 	section.section.about#about
 		header.section__header
 			h2.section__header-name О нашей компании
 		ul.list.about__list
-			- var fact__number = ['7', '5165+', '12%', '1000+']
-			- var fact__text = ['лет работы на рынке', 'довольных клиентов', 'достигает разница между нашими и рыночными ценами', 'товаров в ассортименте']
+			- var fact__number = ['12/7', '5165+', '12%', '1000+']
+			- var fact__text = ['работаем без выходных', 'довольных клиентов', 'наши цены ниже рыночных', 'товаров на складе']
 			- for (var i = 0; i < fact__number.length; i++)
 				li.list__item.about__item
 					wrapper.about__number-wrapper
@@ -114,20 +120,6 @@ block main-content
 		.popup
 			header.popup__header
 				h3.popup__name Производство изделий по вашим чертежам и эскизам
-				a(class="popup__close b-close", href="") Крестик
-			.popup__descr
-				ul.popup__list
-					li.popup__list-item
-						| Компания "Антипарк" располагает большими производственными ресурсами. Мы готовы произвести для Вас изделия как из металла (сталь, медь, латунь, алюминий, нержавейка, титан), так из неметаллов (пластик, оргстекло, капролон, эбонит, фторопласт, бетон). Возможно изготовление образцов и малых партий изделий.
-					li.popup__list-item
-						| Предприятие имеет возможность изготавливать детали на токарно-фрезерных станках с ЧПУ, станках лазерной резки и водорезке, имеет гибочное оборудование, производит вырубку из листового металла, сварку электродами, полуавтоматом и аргоном и многое другое
-					li.popup__list-item
-						| Наши цены Вас приятно удивят!
-
-	div(class="popup__wrapper" id="service__popup-4")
-		.popup
-			header.popup__header
-				h3.popup__name Помощь в получении допуска СРО на все виды работ
 				a(class="popup__close b-close", href="") Крестик
 			.popup__descr
 				ul.popup__list

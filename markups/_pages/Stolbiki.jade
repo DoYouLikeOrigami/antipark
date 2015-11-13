@@ -9,12 +9,12 @@ block title
 block main-content	
 	nav.bread
 		ul.bread__list
-			- var items = {'index.html': 'Главная', '#': 'Столбики'}
+			- var items = {'.': 'Главная', 'goods.html' : 'Товары', '#': 'Столбики'}
 			each val, index in items
 				li(class="bread__item" + ((val=== 'Столбики') ? ' active' : '' ) )
 					a(href= index, class="bread__link")= val
 
-	section.section
+	section.section.goodsSection
 		ul.products__list
 			- var products__names = ['Столбик парковочный бетонируемый' ,'Столбик парковочный анкерный', 'Столбик парковочный передвижной']
 			- var products__dest = 'stolbiki/'
@@ -38,16 +38,19 @@ block main-content
 	- var this_img_src = ['http://www.strod-servis.ru/images/000.jpg','http://www.mosarz10.ru/_pictures/dsc01310.jpg','http://golovinskiy.mos.ru/upload/medialibrary/816/vydvizhnye-stolbiki.jpg'] 
 	- var this_desc_for_img = ['Ограждение территории','Создание парковочных мест', 'Ограничение пешеходной зоны']
 	- var this_paragraph_below = 'Существуют различные варианты исполнения дорожных парковочных столбиков: стальные, оцинкованные и из нержавеющей стали, а также полимерные (пластиковые) столбики. В зависимости от материала изготовления столбика определяется его степень подверженности коррозии и срок службы при конкретных условиях эксплуатации. Стальные и оцинкованные антипарковочные столбики сверху покрываются специальной порошковой краской, которая защищает металл столбика от коррозии. Наши клиенты имеют возможность выбрать цвет столбика из каталога RAL. По умолчанию, парковочные столбики красятся в серый цвет. Также за дополнительную плату возможно дополнительное покрытие столбика лаком. Нержавеющий столбик также может быть покрашен в любой цвет RAL по желанию Заказчика.'
+	
+	section.section
+		header.section__header
+			h2.section__header-name= this_desc_title
+		.full-desc__first-part__wrapper
+			+full-desc__first-part(this_img_src, this_desc_for_img, this_paragraph_below)
 
-	.full-desc__first-part__wrapper
-		+full-desc__first-part(this_desc_title, this_img_src, this_desc_for_img, this_paragraph_below)
+			- var this_title_list = 'В данный момент мы предлагаем 5 вариантов парковочных барьеров:' 
+			- var this_list_values = ['парковочный барьер "треугольный" БТК-3','стандартный антипарковочный барьер АБ-1','усиленный парковочный барьер АБ-1У','усиленный люксовый парковочный барьер АБ-1УЛ', 'нержавеющий парковочный барьер АБН-1']
 
-		- var this_title_list = 'В данный момент мы предлагаем 5 вариантов парковочных барьеров:' 
-		- var this_list_values = ['парковочный барьер "треугольный" БТК-3','стандартный антипарковочный барьер АБ-1','усиленный парковочный барьер АБ-1У','усиленный люксовый парковочный барьер АБ-1УЛ', 'нержавеющий парковочный барьер АБН-1']
+			-var this_list_href = ['#','#','#','#','#']
 
-		-var this_list_href = ['#','#','#','#','#']
-
-		+fullDesc__list(this_title_list, this_list_values, this_list_href)
+			+fullDesc__list(this_title_list, this_list_values, this_list_href)
 
 
 

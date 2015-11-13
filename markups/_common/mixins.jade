@@ -34,8 +34,8 @@ mixin products__item(name, dest, img, chars, values, price, stage)
 				.products__info-button
 					a(href="#").products__buy-btn Заказать
 
-mixin full-desc__first-part(title, img_src, desc_for_img, paragraph_below)
-	h2.full-desc__first-part__title!=title
+mixin full-desc__first-part(img_src, desc_for_img, paragraph_below)
+	//h2.full-desc__first-part__title!=title
 	each val, index in img_src
 		.full-desc__first-part__foto-and-desc
 			.full-desc__first-part__foto
