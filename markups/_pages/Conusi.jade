@@ -9,14 +9,12 @@ block title
 block main-content	
 	nav.bread
 		ul.bread__list
-			- var items = {'index.html': 'Главная', '#': 'Барьеры'}
+			- var items = {'index.html': 'Главная', 'goods.html' : 'Товары', '#': 'Барьеры'}
 			each val, index in items
 				li(class="bread__item" + ((val=== 'Барьеры') ? ' active' : '' ) )
 					a(href= index, class="bread__link")= val
 
-	section.section
-		header.section__header
-			h2.section__header-name Барьеры
+	section.section.goodsSection
 		ul.products__list
 			- var products__names = ['Конус сигнальный' ,'Автоконус с вехой', 'Конус дорожный', 'Конус дорожный с ухом для цепи', 'Конус дорожный с утяжелителем', 'Конус дорожный с утяжелитем и ухом для цепи', 'Автоконус с вехой', 'Конус парковочный мягкий']
 			- var products__dest = 'conusi/'
@@ -47,9 +45,12 @@ block main-content
 	- var list_href = new Array(5);
 	- for (i=4; i>=0; i--) list_href[i]='#'
 	-  var paragraph_usual_2 = 'Наиболее универсальным и распространённым является исполнение дорожного конуса высотой 520мм.'
-
-	.full-desc__first-part__wrapper
-		+full-desc__first-part(this_desc_title, this_img_src, this_desc_for_img, this_paragraph_below)
-		+full-desc__pUsual(paragraph_usual_1)
-		+fullDesc__list(list_title, list_values, list_href)
-		+full-desc__pUsual(paragraph_usual_2)
+	
+	section.section
+		header.section__header
+			h2.section__header-name= this_desc_title
+		.full-desc__first-part__wrapper
+			+full-desc__first-part(this_img_src, this_desc_for_img, this_paragraph_below)
+			+full-desc__pUsual(paragraph_usual_1)
+			+fullDesc__list(list_title, list_values, list_href)
+			+full-desc__pUsual(paragraph_usual_2)
