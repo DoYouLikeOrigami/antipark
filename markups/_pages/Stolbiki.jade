@@ -14,11 +14,7 @@ block main-content
 				li(class="bread__item" + ((val=== 'Столбики') ? ' active' : '' ) )
 					a(href= index, class="bread__link")= val
 
-	include ../_common/mixins
-
 	section.section
-		header.section__header
-			h2.section__header-name Столбики
 		ul.products__list
 			- var products__names = ['Столбик парковочный бетонируемый' ,'Столбик парковочный анкерный', 'Столбик парковочный передвижной']
 			- var products__dest = 'stolbiki/'

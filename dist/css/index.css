@@ -21,7 +21,8 @@
 .goods {
   display: block;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  background: #F5F5F5; }
   .goods .section__header {
     margin-bottom: 10px; }
   .goods__list {
@@ -81,8 +82,6 @@
 /* Service */
 .service {
   background: #f97c00;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
   text-align: center; }
   .service .section__header-name {
     color: #fff;

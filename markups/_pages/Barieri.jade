@@ -1,0 +1,50 @@
+extends ../main
+
+block personalStyle
+	link(rel="stylesheet", type="text/css", href="css/page.css")
+
+block title
+	| Парковочные барьеры
+
+block main-content	
+	nav.bread
+		ul.bread__list
+			- var items = {'index.html': 'Главная', '#': 'Барьеры'}
+			each val, index in items
+				li(class="bread__item" + ((val=== 'Барьеры') ? ' active' : '' ) )
+					a(href= index, class="bread__link")= val
+
+	section.section
+		ul.products__list
+			- var products__names = ['Барьер парковочный "треугольник"' ,'Стандартный парковочный барьер', 'Усиленный парковочный барьер', 'Парковочный барьер из нержавеющей стали']
+			- var products__dest = 'barieri/'
+			- var products__images = ['1', '2', '3', '4']
+			- var products__chars = ['Толщина стенки', 'Материал']
+			- var products__values = [['3 мм', 'Сталь'], ['1,5 мм', 'Сталь'], ['3 мм', 'Сталь'], ['1,5 мм', 'Сталь']]
+			- var products__prices = ['999', '1499', '1999', '3999']
+			- var products__stage = ['299', '599', '599', '699']
+
+			- for (var i = 0; i < products__names.length; i++)
+				+products__item(
+					products__names[i],
+					products__dest,
+					products__images[i],
+					products__chars,
+					products__values[i],
+					products__prices[i],
+					products__stage[i])
+
+	- var this_desc_title = 'Описание "Парковочные барьеры"'
+	- var this_img_src = ['http://www.strod-servis.ru/images/000.jpg','http://www.mosarz10.ru/_pictures/dsc01310.jpg','http://golovinskiy.mos.ru/upload/medialibrary/816/vydvizhnye-stolbiki.jpg'] 
+	- var this_desc_for_img = ['Ограждение территории','Защита индивидуального парковочного места', 'Заградитель проезда']
+	- var this_paragraph_below = 'Складные парковочный барьеры компании "Антипарк" чрезвычайно просты и надежны. Толщина стенки усиленных барьеров превышает 3мм, что само по себе говорит о высокой прочности и коррозионной устойчивости парковочной дуги.'
+
+	.full-desc__first-part__wrapper
+		+full-desc__first-part(this_desc_title, this_img_src, this_desc_for_img, this_paragraph_below)
+
+		- var this_title_list = 'В данный момент мы предлагаем 5 вариантов парковочных барьеров:' 
+		- var this_list_values = ['парковочный барьер "треугольный" БТК-3','стандартный антипарковочный барьер АБ-1','усиленный парковочный барьер АБ-1У','усиленный люксовый парковочный барьер АБ-1УЛ', 'нержавеющий парковочный барьер АБН-1']
+
+		-var this_list_href = ['#','#','#','#','#']
+
+		+fullDesc__list(this_title_list, this_list_values, this_list_href)

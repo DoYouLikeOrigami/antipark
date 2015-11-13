@@ -22,9 +22,6 @@
 		line-height: inherit;
 	}
 */
-body {
-  background: url("../img/bg/bg4.png"); }
-
 /* Mixins */
 /* bread */
 .bread__item {

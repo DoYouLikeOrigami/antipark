@@ -30,10 +30,6 @@ $grey: #dee1e4;
 	}
 */
 
-body {
-	background: url('../img/bg/bg4.png');
-}
-
 /* Mixins */
 @mixin inlineblock ($valine: top) {
 	display: inline-block;

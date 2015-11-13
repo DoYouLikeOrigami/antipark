@@ -1,3 +1,4 @@
+include _common/mixins
 doctype html
 html(lang="ru")
 	head
@@ -33,7 +34,7 @@ html(lang="ru")
 			include _common/_header
 			include _common/_nav
 			include _common/_aside
-			.container.smallWidth
+			.container
 				block main-content
 
 		.orderCall__popup
@@ -47,6 +48,10 @@ html(lang="ru")
 					span.orderCall__form-label-name Номер телефона
 					input(type="text", name="personPhone", placeholder="Куда Вам позвонить", class="orderCall__form-label-input" id="personPhone", required)
 				button(type="submit", class="orderCall__form-button") Заказать
+
+		.buttonUp
+			.buttonUp-body(href='0')
+				.buttonUp-triangleUp
 
 		include _common/_footer
 

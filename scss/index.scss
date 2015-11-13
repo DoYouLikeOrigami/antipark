@@ -43,6 +43,7 @@ $popupPadding: 42px;
 	display: block;
 	margin: 0 auto;
 	text-align: center;
+	background: #F5F5F5;
 
 	.section__header {
 		margin-bottom: 10px;
@@ -114,7 +115,7 @@ $popupPadding: 42px;
 /* Service */
 .service {
 	background: #f97c00;
-	border-radius: 10px;
+	//border-radius: 10px;
 	text-align: center;
 
 	.section__header-name {

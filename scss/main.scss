@@ -118,8 +118,10 @@ p {
 .section {
 	display: block;
 	position: relative;
-	padding: 10px 0;
-	margin-bottom: 20px;
+	padding: 10px 20px;
+	padding-bottom: 20px;
+	background: $mainColor;
+	box-shadow: 0px 6px 3px 4px #ccc;
 
 	&__header {
 		display: block;
@@ -142,6 +144,11 @@ p {
 		background: $secondaryColor;
 		color: $mainColor;	
 		transition: 0.4s;	
+	}
+
+	&:last-of-type {
+		padding-bottom: 10px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -356,6 +363,7 @@ p {
 		padding: 8px 30px;
 		background: $secondaryColor;
 		border-radius: 5px;
+		box-shadow: 0px 0px 3px 4px #ccc;
 
 		.logo__img {
 			display: none;
@@ -375,6 +383,7 @@ p {
 			text-align: center;
 			text-decoration: none;
 			color: $mainColor;
+
 		}
 
 			.logo__text-name {
@@ -404,6 +413,7 @@ p {
 		color: $footerColor;
 		font-weight: light;
 		margin-bottom: 4px;
+		text-shadow: 0 0 2px #ccc;
 
 		&:hover {
 			text-decoration: underline;
@@ -424,6 +434,7 @@ p {
 		float: right;
 		background: $mainColor;
 		border-radius: 2px;
+		box-shadow: 0 0 2px 2px #ccc;
 
 		&:hover {
 			background: $secondaryColor;
@@ -490,15 +501,11 @@ p {
 		margin: 0;
 		padding: 0;
 		border: 2px solid $secondaryColor;
-		border-radius: 5px;
-		background: #fff;
-		//text-align: justify;
-		//font-size: 0;
+		border-radius: 5px 5px 0 0;
+		box-shadow: 0px 0px 3px 4px #ccc;
 	}
 
 	&__item {
-		//display: inline-block;
-		//vertical-align: top;
 		width: $minContainerWidth / 5;
 		display: block;
 		float: left;
@@ -518,14 +525,15 @@ p {
 		font-size: $fontSize2;
 		line-height: $fontSize2 + 2;
 		text-decoration: none;
-		color: $secondaryColor;
+		color: $mainColor;
+		background: $secondaryColor;
 		letter-spacing: 1px;
 		transition: 0.3s;
 	}
 
 		&__link:hover {
-			color: $mainColor;
-			background: $secondaryColor;
+			color: $secondaryColor;
+			background: $mainColor;
 		}
 }
 
@@ -592,7 +600,73 @@ p {
 			margin-left: -2px;
 		}
 
+
 	.aside__item-text {
 		display: none;
 	}
 }
+
+	.buttonUp {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 10%;
+		min-width: 60px;
+		cursor: pointer;
+		transition: all .2s ease-in-out 0s;
+		z-index: 3;
+		display: none;
+
+		&-body	{
+			position: relative;
+			top: 85%;
+			left: 50%;
+			margin-left: -30px;
+			background: rgba(0,0,0,.25);
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: all .2s ease-in-out 0s;
+			z-index: 2;
+
+			@media only screen and (max-height: 500px) {
+				top: 80%;
+			}
+
+			@media only screen and (max-height: 350px) {
+				top: 75%;
+			}
+
+		}
+
+		&-triangleUp {
+			position: relative;
+			margin: auto;
+			height: 0;
+			width: 0;
+			border: 15px solid transparent;
+			border-bottom: 25px solid rgba(0,0,50,.35);
+			transition: all .2s ease-in-out 0s;
+			z-index: 1;
+		}
+
+		&-transform {
+			transform: matrix(1, 0, 0, -1, 0, 0)
+		}
+
+		&:hover {
+			background: rgba(0,0,0,.15);
+		}
+
+		.buttonUp:hover &-body {
+			background: rgba(0,0,0,.25);
+			border: 1px solid white;
+		}
+
+		.buttonUp:hover &-triangle {
+			border-bottom: 25px solid rgba(0,0,50,.3);
+		}
+	}
+
