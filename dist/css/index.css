@@ -22,7 +22,7 @@
   display: block;
   margin: 0 auto;
   text-align: center;
-  background: #F5F5F5; }
+  background: #e6e6e6; }
   .goods .section__header {
     margin-bottom: 10px; }
   .goods__list {
@@ -75,9 +75,10 @@
     display: block;
     max-width: 150px;
     min-height: 40px;
-    color: #f97c00;
+    color: #4c4c4c;
     font-weight: bold;
-    font-size: 16px; }
+    font-size: 19px;
+    line-height: 20px; }
 
 /* Service */
 .service {

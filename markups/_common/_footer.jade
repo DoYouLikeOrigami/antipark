@@ -1,7 +1,7 @@
 ﻿footer.mainFooter
 	.mainFooter__top
 		wrapper.container.clearfix
-			wrapper.adress
+			wrapper.adress.sm__padding-left
 				ul.adress__list
 					li.adress__list-item.city-change.spb-city
 						| Санкт-Петербург, ул Красная, дом 1
@@ -9,10 +9,11 @@
 						| Москва, ул Красная, дом 1
 					li.adress__list-item.city-change.novosib-city.hidden
 						| Новосибирск, ул Красная, дом 1
-			wrapper.contacts
+			wrapper.contacts.sm__padding-right
 				ul.contacts__list
 					li.contacts__list-item
-						a(class="contacts__list-link contacts__tel", href="tel:+7(812)900-40-10") +7(812)900-40-10
+						a(class="contacts__list-link contacts__tel", href="tel:+7(812)900-40-10") +7(812) 
+							span.contacts__strong 900-40-10
 					li.contacts__list-item.city-change.spb-city
 						a(class="contacts__list-link", href="mailto:spb@9004010.ru") spb@9004010.ru
 					li.contacts__list-item.city-change.msc-city.hidden
@@ -21,6 +22,6 @@
 						a(class="contacts__list-link", href="mailto:novosib@9004010.ru") novosib@9004010.ru
 	.mainFooter__bottom
 		wrapper.container
-			.copyright СТОЛБИК.РФ 2015 &copy; 
+			.copyright СТОЛБИК.РФ 2008-2015 &copy; 
 
 

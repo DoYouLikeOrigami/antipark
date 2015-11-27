@@ -6,15 +6,18 @@ mixin service__descr(indx, descr__name, descr__text)
 		.popup__descr
 			span.popup__text desrc__text
 
-mixin products__item(name, dest, img, chars, values, price, stage)
+mixin products__item(attr, name, dest, img, chars, values, price, stage)
 	li.products__item
-		.products__item-inner
+		.products__item-inner.clearfix
 			.products__left
+				.products__attr
+					a(href="#").products__attr-name= attr
+			.products__about
 				.products__image
 					a(href="#").products__image-display
 						img(src="img/" + dest + img + ".jpg", alt= name).products__image-pic
 				.products__desc
-					.products__desc-title= name
+					a(href="#").products__desc-title= name
 					ul.products__desc-options 
 						- var index = 0;
 						- for (var i = 0; i < chars.length; i++)
