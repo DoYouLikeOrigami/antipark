@@ -6,18 +6,18 @@ mixin service__descr(indx, descr__name, descr__text)
 		.popup__descr
 			span.popup__text desrc__text
 
-mixin products__item(attr, name, dest, img, chars, values, price, stage)
+mixin products__item(attr, name, href, dest, img, chars, values, price, stage)
 	li.products__item
 		.products__item-inner.clearfix
 			.products__left
 				.products__attr
-					a(href="#").products__attr-name= attr
+					a(href= href).products__attr-name= attr
 			.products__about
 				.products__image
-					a(href="#").products__image-display
+					a(href= href).products__image-display
 						img(src="img/" + dest + img + ".jpg", alt= name).products__image-pic
 				.products__desc
-					a(href="#").products__desc-title= name
+					a(href= href).products__desc-title= name
 					ul.products__desc-options 
 						- var index = 0;
 						- for (var i = 0; i < chars.length; i++)
@@ -57,4 +57,32 @@ mixin fullDesc__list(title_list, list_values, list_href)
 mixin full-desc__pUsual(text)
 	p.full-desc__pUsual!=text
 
-
+mixin product__page(name, dest, img, chars, values, price, stage)
+	.product__page
+		header.product__page-header
+			h2.product__page-name= name
+		article.product__page-info
+			wrapper.product__page-wrapper
+				wrapper.product__page-wrapper-inner
+					img(src="img/" + dest + img + '.jpg', alt= name).product__page-img
+			.product__page-desc.description
+				header.description__header
+					h3.description__header-text Характеристики
+				ul.description__list
+					- var index = 0;
+					- for (var i = 0; i < chars.length; i++)
+						li(class="description__list-item " + ((index++ % 2) ? '' : 'description__list-item-odd') ).clearfix
+							.description__options-key= chars[i]
+							.description__options-value= values[i]
+			.product__page-price.price
+				.price__info
+					.price__info-text.clearfix
+						span.price__label Цена
+						span.price__num= price
+							i.rub
+					.price__info-text.clearfix
+						span.price__label Установка
+						span.price__num= stage
+							i.rub
+				.price__btn
+					a(href="#").price__btn-buy Заказать

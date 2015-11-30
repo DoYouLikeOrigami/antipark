@@ -111,6 +111,11 @@
     color: #f97c00;
     -webkit-transition: 0.4s;
     transition: 0.4s; }
+  .service__item:hover .service__wrapper-inner {
+    border-color: #f97c00;
+    background: #f97c00;
+    -webkit-transition: 0.4s;
+    transition: 0.4s; }
   .service__link {
     display: block;
     padding: 10px 15px;
@@ -119,12 +124,36 @@
     text-decoration: none;
     color: #fff;
     letter-spacing: 1px; }
+  .service__wrapper {
+    display: block;
+    margin-bottom: 10px;
+    max-width: 200px;
+    padding-top: 5px; }
+    .service__wrapper-inner {
+      width: 175px;
+      background: #fff;
+      height: 100px;
+      margin: 0 auto;
+      border: 2px solid #fff;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      overflow: hidden;
+      display: block;
+      position: relative; }
+  .service__img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto; }
   .service__text {
     display: block;
     max-width: 200px;
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 16px; }
+    font-size: 18px; }
   .service__about {
     display: block;
     font-size: 14px; }

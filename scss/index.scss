@@ -155,6 +155,12 @@ $popupPadding: 42px;
 			transition: 0.4s;
 		}
 
+		&__item:hover .service__wrapper-inner {
+			border-color: $secondaryColor;
+			background: $secondaryColor;
+			transition: 0.4s;
+		}
+
 	&__link {
 		display: block;
 		padding: 10px 15px;
@@ -164,12 +170,44 @@ $popupPadding: 42px;
 		letter-spacing: 1px;
 	}
 
+	&__wrapper {
+		display: block;
+		margin-bottom: 10px;
+		max-width: 200px;
+		padding-top: 5px;
+
+		&-inner {
+			width: 175px;
+			background: $mainColor;
+			height: 100px;
+			margin: 0 auto;
+			border: 2px solid $mainColor;
+			border-radius: 3px;
+			overflow: hidden;
+			display: block;
+			position: relative;
+		}
+
+	}
+
+	
+
+	&__img {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+	}
+
 	&__text {
 		display: block;
 		max-width: 200px;
 		margin-bottom: 10px;
 		font-weight: bold;
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 	&__about {

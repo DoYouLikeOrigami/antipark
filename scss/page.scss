@@ -5,6 +5,7 @@ $footerColor: rgb(76, 76, 76);
 $black: #000;
 $orange: #ff6600;
 $grey: #dee1e4;
+$akcentGrey: #e6e6e6;
 /*
 @font-face {
     font-family: 'als_rublregular';
@@ -172,25 +173,38 @@ $grey: #dee1e4;
 
 .products__item {
 	border-top: 1px solid $grey;
+	background: $akcentGrey;
 
 
 	&:first-child {
 		border-top: 0 none;
 	}
 
+	.products__option-item-odd {
+		background: $mainColor;
+	}
+
+	.products__info {
+		border-color: $mainColor;
+	}
+
+	.products__attr {
+		border-color: $mainColor;
+	}
+
 	&:nth-of-type(2n) {
-		background: #e6e6e6;
+		background: #fff;
 
 		.products__option-item-odd {
-			background: $mainColor;
+			background: $akcentGrey;
 		}
 
 		.products__info {
-			border-color: $mainColor;
+			border-color: $akcentGrey;
 		}
 
 		.products__attr {
-			border-color: $mainColor;
+			border-color: $akcentGrey;
 		}
 	}
 }

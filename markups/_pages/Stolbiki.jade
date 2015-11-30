@@ -18,6 +18,7 @@ block main-content
 		ul.products__list
 			- var products__attrs = ['Столбик ПШ-201', 'Столбик ПШ-201', 'Столбик ПШ-201']
 			- var products__names = ['Столбик парковочный бетонируемый' ,'Столбик парковочный анкерный', 'Столбик парковочный передвижной']
+			- var products__href = ['PSH_201.html', 'PSH_201.html', 'PSH_201.html']
 			- var products__dest = 'stolbiki/'
 			- var products__images = ['1', '1', '1']
 			- var products__chars = ['Высота', 'Диаметр корпуса', 'Материал']
@@ -29,6 +30,7 @@ block main-content
 				+products__item(
 					products__attrs[i],
 					products__names[i],
+					products__href[i],
 					products__dest,
 					products__images[i],
 					products__chars,
