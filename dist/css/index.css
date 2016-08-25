@@ -133,7 +133,7 @@
       width: 175px;
       background: #fff;
       height: 100px;
-      margin: 0 auto;
+      margin: 0 13px;
       border: 2px solid #fff;
       -webkit-border-radius: 3px;
       border-radius: 3px;
@@ -148,6 +148,8 @@
     top: 0;
     bottom: 0;
     margin: auto; }
+    .service__img.margin-top {
+      margin-top: -10px; }
   .service__text {
     display: block;
     max-width: 200px;

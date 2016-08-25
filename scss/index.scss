@@ -180,7 +180,7 @@ $popupPadding: 42px;
 			width: 175px;
 			background: $mainColor;
 			height: 100px;
-			margin: 0 auto;
+			margin: 0 13px;
 			border: 2px solid $mainColor;
 			border-radius: 3px;
 			overflow: hidden;
@@ -200,6 +200,10 @@ $popupPadding: 42px;
 		top: 0;
 		bottom: 0;
 		margin: auto;
+
+		&.margin-top {
+			margin-top: -10px;
+		}
 	}
 
 	&__text {

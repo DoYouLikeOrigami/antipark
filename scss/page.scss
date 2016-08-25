@@ -106,7 +106,7 @@ $akcentGrey: #e6e6e6;
 }
 
 .goodsSection {
-	background: $secondaryColor;
+	//background: $secondaryColor;
 	padding: 0;
 	padding-top: 0;
 }
@@ -172,7 +172,7 @@ $akcentGrey: #e6e6e6;
 }
 
 .products__item {
-	border-top: 1px solid $grey;
+	border-top: 2px solid #999;
 	background: $akcentGrey;
 
 
@@ -203,39 +203,53 @@ $akcentGrey: #e6e6e6;
 			border-color: $akcentGrey;
 		}
 
-		.products__attr {
+		.products__left {
 			border-color: $akcentGrey;
+		}
+
+		.products__price {
+			background: $grey;
 		}
 	}
 }
 
 .products__item-inner {
-	padding: 19px 22px;
+	padding: 19px 10px;
 	@include clearfix;
 	position: relative;
 }
 
 .products__left {
-	float: left;
+	position: absolute;
+	top: 23px;
+	bottom: 23px;
+	left: 11px;
+	width: 165px;
+	padding: 0 5px;
+	border-right: 1px solid white;
+
+	&-container {
+		position: relative; 
+		width: 100%; 
+		height: 100%; 
+	}
 }
 
 .products__attr {
-	display: block;
-	position: relative;
-	width: 180px;
-	height: 125px;
+	display: table;
+	position: absolute;
 	text-align: center;
-	padding-right: 15px;
-	border-right: 1px solid $grey;
-	margin-right: 15px;
+	width: 150px;
+	top: 0; 
+	bottom: 0; 
+	right: 0; 
+	left: 0; 
+	margin: auto; 
 }
 
 .products__attr-name {
-	position: relative;
-	top: 50%;
 	height: 22px;
 	line-height: 22px;
-	margin-top: -22px;
 	font-size: 18px;
 	color: $footerColor;
 	font-weight: bold;
@@ -326,7 +340,7 @@ $akcentGrey: #e6e6e6;
 	line-height: 19px;
 	float: right;
 	display: inline-block;
-	max-width: 55%;
+	max-width: 70%;
 	text-align: right;
 }
 	.products__option-item-odd {
@@ -337,13 +351,13 @@ $akcentGrey: #e6e6e6;
 	position: absolute;
 	top: 23px;
 	bottom: 23px;
-	right: 23px;
-	width: 180px;
+	right: 11px;
+	width: 210px;
 	text-align: right;
 }
 
 .products__info {
-	padding-left: 15px;
+	padding-left: 10px;
 	border-left: 1px solid $grey;
 	height: 100%;
 }
@@ -354,6 +368,9 @@ $akcentGrey: #e6e6e6;
 	@include clearfix;
 	margin-bottom: 10px;
 	line-height: 24px;
+	background: $mainColor;
+	padding: 3px 5px;
+	border-radius: 3px;
 }
 .products__price-num {
 	font-size: 22px;
@@ -374,7 +391,7 @@ $akcentGrey: #e6e6e6;
 	padding: 9px 12px;
 	@include open-sans(bold);
 	@include border-radius(4px);
-	background: $orange;
+	background: $secondaryColor;
 	color: #fff;
 	margin-bottom: 9px;
 	font-size: 17px;
@@ -401,7 +418,7 @@ $akcentGrey: #e6e6e6;
 			border-radius: 7px;
 			border: 1px solid rgba(0,0,0,.1);
 			background: $mainColor;
-			padding-top: 20px
+			padding-top: 20px;
 		}
 		&__title {
 			color: black;
@@ -433,10 +450,22 @@ $akcentGrey: #e6e6e6;
 			text-align: center;
 			max-width: 200px;
 		}
-		&__p-below {
-			color: black;
-			margin: 30px 60px 20px 60px;
-			text-indent: 20px;
+
+		&__text-wrapper {
+			display: block;
+			padding: 20px 20px;
+
+			p {
+				color: $footerColor;
+				margin-bottom: 10px;
+				text-indent: 20px;
+			}
+
+			a {
+				//color: $orange;
+				//text-decoration: none;
+				//76font-style: italic;
+			}
 		}
 	}
 }
@@ -483,5 +512,125 @@ $akcentGrey: #e6e6e6;
   		}
 
   	 }
-  
 
+  	 .lenta__header {
+		margin-bottom: 0;
+  	 }
+  
+	.goods__table {
+		margin: 0 auto;
+		max-width: 1000px;
+		color: $footerColor;
+
+		&-line {
+			border-bottom: 2px solid $akcentGrey;
+
+			&:nth-of-type(2n) {
+				background-color: $grey;
+			}
+		}
+
+		&-cell {
+			padding: 5px 10px;
+			vertical-align: top;
+			min-width: 180px;
+		}
+
+		.goods__img-cell {
+
+			.goods__img-link {
+				display: block;
+				position: relative;
+				border-radius: 3px;
+				width: 140px;
+				height: 140px;
+			}
+		
+			.goods__img-pic {
+				position: absolute;
+				max-width: 95%;
+				max-height: 95%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+
+		}
+
+		.goods__name-cell {
+			width: 300px;
+			
+			.goods__name-text {
+				display: block;
+				margin: 3px auto;
+				font-weight: bold;
+				font-size: 20px;
+				color: $footerColor;
+				text-decoration: none;
+				transition: 0.3s;
+				text-align: middle;
+
+				&:hover {
+					color: $orange;
+				}
+			}
+			
+			.goods__name-desc {
+				display: block;
+				padding: 5px 8px;
+				font-size: 16px;
+			}
+		}
+
+		.goods__size-cell {
+
+			.goods__size-head {
+				display: block;
+				margin: 3px auto;
+				font-weight: bold;
+				font-size: 20px;
+			}
+
+			.goods__size-text {
+				display: block;
+				padding: 5px 8px;
+				font-size: 16px;
+			}
+		}
+
+		.goods__price-cell {
+			min-width: 230px;
+			vertical-align: middle;
+
+			.goods__price-list {
+
+				.goods__price-item {
+					display: block;
+					padding: 3px 5px;
+					font-size: 16px;
+
+					.goods__price-key {
+						float: left;
+						width: 50%;
+						text-align: left;
+					}
+
+					.goods__price-value {
+						float: right;
+						width: 50%;
+						text-align: right;
+					}
+
+					&:nth-of-type(2n) {
+						background-color: $grey;
+					}
+
+					&:nth-of-type(2n+1) {
+						background-color: white;
+					}
+				}
+			}
+		}
+	}

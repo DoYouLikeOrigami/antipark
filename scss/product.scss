@@ -220,7 +220,7 @@ $akcentGrey: #e6e6e6;
 
 		&__header-text {
 			margin: 0;
-			font-size: 26px;
+			font-size: 23px;
 			@include open-sans(semibold);
 			color: $footerColor;
 		}
@@ -279,6 +279,10 @@ $akcentGrey: #e6e6e6;
 			&-text {
 				display: block;
 				margin-top: 5px;
+				padding: 5px 10px;
+				border-radius: 3px;
+				background: $secondaryColor;
+
 			}
 
 			&-text:first-child {
@@ -290,7 +294,7 @@ $akcentGrey: #e6e6e6;
 		&__num {
 			@include open-sans(semibold);
 			font-size: 22px;
-			color: $footerColor;
+			color: black;
 		}
 
 		&__label {

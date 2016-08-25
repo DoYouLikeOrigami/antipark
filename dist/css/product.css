@@ -125,7 +125,7 @@
       margin-bottom: 10px; }
     .product__page .description__header-text {
       margin: 0;
-      font-size: 26px;
+      font-size: 23px;
       font-family: 'Open Sans';
       font-weight: 600;
       color: #4c4c4c; }
@@ -175,7 +175,11 @@
       padding: 10px 0; }
       .product__page .price__info-text {
         display: block;
-        margin-top: 5px; }
+        margin-top: 5px;
+        padding: 5px 10px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        background: #f97c00; }
       .product__page .price__info-text:first-child {
         margin-top: 0; }
     .product__page .price__label,
@@ -183,7 +187,7 @@
       font-family: 'Open Sans';
       font-weight: 600;
       font-size: 22px;
-      color: #4c4c4c; }
+      color: black; }
     .product__page .price__label {
       float: left; }
     .product__page .price__num {
